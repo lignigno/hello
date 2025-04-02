@@ -309,7 +309,7 @@ alphabet['fl']=\
 ████████
 "
 
-name="lignigno"
+name="01edu"
 color="255;0;128"
 
 printDelay=0.055
