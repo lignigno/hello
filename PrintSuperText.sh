@@ -310,7 +310,7 @@ alphabet['fl']=\
 "
 
 name="01edu"
-color="255;0;128"
+color="0;99;249"
 
 printDelay=0.055
 deleteDelay=0.02
