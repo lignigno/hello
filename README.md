@@ -8,11 +8,25 @@
 
 ---
 
+> Install on devise
+
 ``` bash
 cd /Users/Shared && \
 git clone https://github.com/lignigno/hello.git && \
 cp -rf hello/PrintSuperText.sh ./
 rm -rf hello
+```
+
+> Install for zsh
+
+``` bash
+echo "/Users/Shared/PrintSuperText.sh nikname 255 0 128" >> ~/.zshrc
+```
+
+> Install for bash
+
+``` bash
+echo "/Users/Shared/PrintSuperText.sh nikname 255 0 128" >> ~/.bashrc
 ```
 
 ### ***HOW IT USE***
