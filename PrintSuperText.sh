@@ -421,11 +421,11 @@ text=$(printf "hello" | tr 'a-z' 'A-Z')
 
 # show_cursor
 
-# for ((j=0; j<${#text}; j++)); do
-# 	print_char "${text:$j:1}"
+for ((j=0; j<${#text}; j++)); do
+	print_char "${text:$j:1}"
 
-# 	sleep $printDelay
-# done
+	sleep $printDelay
+done
 
 # blink
 
