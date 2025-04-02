@@ -365,8 +365,8 @@ _clr_input() {
 
 print_char() {
 	# _cut_last_char
-	# _add_char "$1"
-	_add_char fl
+	_add_char "$1"
+	# _add_char fl
 	printf "\033[u"
 	_print_all
 }
