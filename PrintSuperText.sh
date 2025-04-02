@@ -360,13 +360,7 @@ _print_all() {
 }
 
 _clr_input() {
-	printf "\033[0J\n"
-	printf "\033[0J\n"
-	printf "\033[0J\n"
-	printf "\033[0J\n"
-	printf "\033[0J\n"
-	printf "\033[0J\n"
-	printf "\033[0J\n"
+	clear
 }
 
 print_char() {
