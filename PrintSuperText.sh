@@ -365,10 +365,12 @@ _clr_input() {
 
 print_char() {
 	# _cut_last_char
-	_add_char "$1"
+	# _add_char "$1"
 	# _add_char fl
 	# printf "\033[u"
 	# _print_all
+
+	printf "$1"
 }
 
 delete_char() {
@@ -459,7 +461,7 @@ done
 # 	sleep $printDelay
 # done
 
-hide_cursor
+# hide_cursor
 
 printf "\033[0m"
 # printf "\033[?25h"
