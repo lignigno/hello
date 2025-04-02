@@ -15,7 +15,7 @@ cd /Users/Shared && \
 git clone https://github.com/lignigno/hello.git && \
 cp -rf hello/PrintSuperText.sh ./ && \
 rm -rf hello && \
-cp -
+cd -
 ```
 
 > Install for zsh

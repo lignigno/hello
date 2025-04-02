@@ -353,7 +353,7 @@ _cut_last_char() {
 
 _print_all() {
 	printf "${rows[1]}\n"
-	printf "\033[1;38;2;0;99;249m"
+	# printf "\033[1;38;2;0;99;249m"
 	for i in {$_first_char_row..$_last_char_row}; do
 		printf "${rows[$i]}\n"
 	done
@@ -399,7 +399,7 @@ hide_cursor() {
 
 _clr_input
 printf "\033[s"
-printf "\033[?25l"
+# printf "\033[?25l"
 
 if [ -n "$1" ]; then
 	name="$1"
@@ -458,4 +458,4 @@ done
 hide_cursor
 
 printf "\033[0m"
-printf "\033[?25h"
+# printf "\033[?25h"
