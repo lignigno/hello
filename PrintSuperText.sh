@@ -367,8 +367,8 @@ print_char() {
 	# _cut_last_char
 	_add_char "$1"
 	# _add_char fl
-	printf "\033[u"
-	_print_all
+	# printf "\033[u"
+	# _print_all
 }
 
 delete_char() {
@@ -424,9 +424,9 @@ text=$(printf "hello" | tr 'a-z' 'A-Z')
 # show_cursor
 
 for ((j=0; j<${#text}; j++)); do
-	# print_char "${text:$j:1}"
+	print_char "${text:$j:1}"
 
-	printf "${alphabet["${text:$j:1}"]}\n"
+	# printf "${alphabet["${text:$j:1}"]}\n"
 
 	sleep $printDelay
 done
