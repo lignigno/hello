@@ -439,10 +439,10 @@ done
 
 # deleting
 
-for i in {1..6}; do
-	delete_char
-	sleep $deleteDelay
-done
+# for i in {1..6}; do
+# 	delete_char
+# 	sleep $deleteDelay
+# done
 
 # last print
 
