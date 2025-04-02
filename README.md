@@ -13,7 +13,7 @@
 ``` bash
 cd /Users/Shared && \
 git clone https://github.com/lignigno/hello.git && \
-cp -rf hello/PrintSuperText.sh ./
+cp -rf hello/PrintSuperText.sh ./ && \
 rm -rf hello
 ```
 
