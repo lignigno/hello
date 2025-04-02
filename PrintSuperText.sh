@@ -339,8 +339,6 @@ _add_char() {
 	block=$(printf '%*s' $((${#block}-2)) | tr ' ' '_')
 	block+=$num
 	rows[$_char_size]+=$block
-
-	stty cols ${#rows[$_char_size]}
 }
 
 _cut_last_char() {
@@ -352,11 +350,13 @@ _cut_last_char() {
 }
 
 _print_all() {
-	printf "${rows[1]}\n"
-	printf "\033[1;38;2;0;99;249m"
+	tmp="${rows[1]}\n"
+	tmp+="\033[1;38;2;${color}m"
 	for i in {$_first_char_row..$_last_char_row}; do
-		printf "${rows[$i]}\n"
+		tmp+="${rows[$i]}\n"
 	done
+
+	printf "$tmp"
 }
 
 _clr_input() {
@@ -364,13 +364,11 @@ _clr_input() {
 }
 
 print_char() {
-	# _cut_last_char
-	# _add_char "$1"
-	# _add_char fl
-	# printf "\033[u"
-	# _print_all
-
-	printf "$1"
+	_cut_last_char
+	_add_char "$1"
+	_add_char fl
+	printf "\033[u"
+	_print_all
 }
 
 delete_char() {
@@ -401,7 +399,7 @@ hide_cursor() {
 
 _clr_input
 printf "\033[s"
-# printf "\033[?25l"
+printf "\033[?25l"
 
 if [ -n "$1" ]; then
 	name="$1"
@@ -416,52 +414,47 @@ if	[ "$#" -eq 4 ] &&
 	color+="$4"
 fi
 
-
 # first print
 
 text=$(printf "hello" | tr 'a-z' 'A-Z')
 
-
-
-# show_cursor
+show_cursor
 
 for ((j=0; j<${#text}; j++)); do
 	print_char "${text:$j:1}"
-
-	# printf "${alphabet["${text:$j:1}"]}\n"
 
 	sleep $printDelay
 done
 
 # blink
 
-# sleep $blinkDelay
-# for i in {1..2}; do
-# 	hide_cursor
-# 	sleep $blinkDelay
-# 	show_cursor
-# 	sleep $blinkDelay
-# done
+sleep $blinkDelay
+for i in {1..2}; do
+	hide_cursor
+	sleep $blinkDelay
+	show_cursor
+	sleep $blinkDelay
+done
 
 # deleting
 
-# for i in {1..6}; do
-# 	delete_char
-# 	sleep $deleteDelay
-# done
+for i in {1..6}; do
+	delete_char
+	sleep $deleteDelay
+done
 
 # last print
 
-# sleep 0.1
+sleep 0.1
 
-# text=$(printf "$name" | tr 'a-z' 'A-Z')
+text=$(printf "$name" | tr 'a-z' 'A-Z')
 
-# for ((j=0; j<${#text}; j++)); do
-# 	print_char "${text:$j:1}"
-# 	sleep $printDelay
-# done
+for ((j=0; j<${#text}; j++)); do
+	print_char "${text:$j:1}"
+	sleep $printDelay
+done
 
-# hide_cursor
+hide_cursor
 
 printf "\033[0m"
-# printf "\033[?25h"
+printf "\033[?25h"
