@@ -446,14 +446,14 @@ done
 
 # last print
 
-sleep 0.1
+# sleep 0.1
 
-text=$(printf "$name" | tr 'a-z' 'A-Z')
+# text=$(printf "$name" | tr 'a-z' 'A-Z')
 
-for ((j=0; j<${#text}; j++)); do
-	print_char "${text:$j:1}"
-	sleep $printDelay
-done
+# for ((j=0; j<${#text}; j++)); do
+# 	print_char "${text:$j:1}"
+# 	sleep $printDelay
+# done
 
 hide_cursor
 
