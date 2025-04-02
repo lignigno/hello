@@ -9,7 +9,7 @@
 ---
 
 ``` bash
-cd ~/../ && \
+cd /Users/Shared && \
 git clone https://github.com/lignigno/hello.git && \
 cp -rf hello/PrintSuperText.sh ./
 ```
