@@ -353,7 +353,7 @@ _cut_last_char() {
 
 _print_all() {
 	tmp="${rows[1]}\n"
-	tmp+="\033[1;38;2;${color}m"
+	tmp+="\033[1;38;2;0;99;249m"
 	for i in {$_first_char_row..$_last_char_row}; do
 		tmp+="${rows[$i]}\n"
 	done
