@@ -353,14 +353,20 @@ _cut_last_char() {
 
 _print_all() {
 	printf "${rows[1]}\n"
-	# printf "\033[1;38;2;0;99;249m"
+	printf "\033[1;38;2;0;99;249m"
 	for i in {$_first_char_row..$_last_char_row}; do
 		printf "${rows[$i]}\n"
 	done
 }
 
 _clr_input() {
-	clear
+	printf "\033[0J\n"
+	printf "\033[0J\n"
+	printf "\033[0J\n"
+	printf "\033[0J\n"
+	printf "\033[0J\n"
+	printf "\033[0J\n"
+	printf "\033[0J\n"
 }
 
 print_char() {
