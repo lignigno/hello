@@ -426,7 +426,7 @@ text=$(printf "hello" | tr 'a-z' 'A-Z')
 for ((j=0; j<${#text}; j++)); do
 	# print_char "${text:$j:1}"
 
-	printf "${alphabet[${text:$j:1}]}\n"
+	printf "${alphabet["${text:$j:1}"]}\n"
 
 	sleep $printDelay
 done
