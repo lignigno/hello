@@ -429,13 +429,13 @@ done
 
 # blink
 
-sleep $blinkDelay
-for i in {1..2}; do
-	hide_cursor
-	sleep $blinkDelay
-	show_cursor
-	sleep $blinkDelay
-done
+# sleep $blinkDelay
+# for i in {1..2}; do
+# 	hide_cursor
+# 	sleep $blinkDelay
+# 	show_cursor
+# 	sleep $blinkDelay
+# done
 
 # deleting
 
