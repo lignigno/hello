@@ -1,6 +1,9 @@
 <br>
 
 <h1 align="center">HELLO</h1>
+<div align="center">
+	<img src="preview.gif" alt="hello preview"></img>
+</div>
 
 <br>
 
