@@ -312,8 +312,8 @@ alphabet['fl']=\
 name="01edu"
 color="0;99;249"
 
-printDelay=0.055
-deleteDelay=0.02
+printDelay=0.04
+deleteDelay=0.005
 blinkDelay=0.3
 
 _char_height=6
@@ -322,6 +322,10 @@ _first_char_row=$((1+$_sign_offset))
 _last_char_row=$(($_first_char_row+$_char_height-1))
 _char_size=$(($_last_char_row+1))
 
+
+for i in {$_first_char_row..$_last_char_row}; do
+	rows[$i]+="$(echo "$char" | head -n $(($i-$_sign_offset)) | tail -n 1)"
+done
 rows[1]="\033[1;38;2;255;0;128;48;2;0;0;0mCreated by lignigno\033[0m"
 
 # _________________________________________________________________________________SUBCODE
